@@ -217,6 +217,10 @@ export default class LocalAccountsMiddleware extends Middleware {
       });
     });
 
+    register('signer_generateAuthorizationToken', () => {
+      return '';
+    });
+
     register('signer_rejectRequest', ([id]) => {
       return transactions.reject(id);
     });
